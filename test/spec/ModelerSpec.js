@@ -22,6 +22,11 @@ describe('Modeler', function() {
   }
 
 
+  it.only('should import dungeon process', function(done) {
+    var xml = require('../fixtures/bpmn/adventure.bpmn');
+    createModeler(xml, done);
+  });
+
   it('should import simple process', function(done) {
     var xml = require('../fixtures/bpmn/simple.bpmn');
     createModeler(xml, done);
